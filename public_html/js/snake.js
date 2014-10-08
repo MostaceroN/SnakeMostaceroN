@@ -28,3 +28,26 @@ function gameDraw() {
     context.fillStyle = "rgb(180, 250, 213)";
     context.fillRect(0, 0, screenWidth, screenHeight);
 }
+
+function snakeInitialize () {
+ snake = [];
+ snakeLength: 5;
+ snakeSize: 20;
+ 
+ for (var index = 0; index < snakeLength; index++) {
+     snake.push( {
+         x: index,
+         y: 0
+     });
+    }
+}
+
+function snakeDraw () {
+ for (var index = 0; index < snakelength; index++) {
+     context.fillStyle = "white";
+ }
+}
+
+function snakeUpdate () {
+    
+}
