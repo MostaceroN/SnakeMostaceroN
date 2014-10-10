@@ -10,7 +10,10 @@ gameInitialize();
 snakeInitialize();
 gameDraw();
 snakeDraw();
-
+snakeUpdate();
+snakeDraw();
+snakeUpdate();
+snakeDraw();
 function gameInitialize() {
     var canvas = document.getElementById("game-screen");
    context = canvas.getContext ("2d");
@@ -52,5 +55,13 @@ function snakeDraw () {
 }
 
 function snakeUpdate () {
+    var snakeHeadX = snake[0].x;
+    var snakeHeadY = snake[0].y;
     
+    snakeHeadX++;
+    
+    var snakeTail = snake.pop();
+    snakeTail.x = snakeHeadX;
+    snakeTail.y = snakeHeadY;
+    snake.unshift(snakeTail);
 }
