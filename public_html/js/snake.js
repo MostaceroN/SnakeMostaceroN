@@ -39,7 +39,7 @@ function gameInitialize() {
  
  restartButton = document.getElementById("restartButton");
  restartButton.addEventListener("click", gameRestart)
- 
+ /*this coding does several things to my snake*/
  playHUD = document.getElementById("playHUD");
  scoreboard = document.getElementById("scoreboard");
  setState("PLAY");
@@ -88,7 +88,7 @@ function snakeDraw () {
      context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
  }
 }
-
+/*the code above makes the snake go different ways and displays the color of my snake*/
 function snakeUpdate () {
     var snakeHeadX = snake[0].x;
     var snakeHeadY = snake[0].y;
@@ -174,7 +174,7 @@ function checkWallCollisions(snakeHeadX, snakeHeadY){
         setState("GAME OVER");
     }
 }
-
+/*lots of coding lowkey*/
 function checkSnakeCollisions(snakeHeadX, snakeHeadY){
     for(var index = 1; index<snake.length; index++){
         if(snakeHeadX == snake[index].x && snakeHeadY == snake[index].y){
